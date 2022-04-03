@@ -8,7 +8,8 @@ products:
 description: "This sample creates a multi-container application in an Azure Kubernetes Service (AKS) cluster."
 ---
 Try quick start - TIME challenge record time 15 minutes for app, then delete resource group:
-first attempt 03apr22 19:17 took 21:25.67 to complete up to delete command
+1st attempt 03apr22 19:17 took 21:25.67 to complete up to delete command
+2nd attempt 03apr22 19:53 took 14:31:48 to delete commands
 
 This is a shorter version of docs.microsoft.com/en-us/azure/aks/quickstart-helm so any modifications to the below, check the page. i.e. if the acr name is different then you must update  the name in azure-vote-front/values.yaml
 
