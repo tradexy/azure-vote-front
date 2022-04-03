@@ -7,7 +7,7 @@ products:
   - azure-redis-cache
 description: "This sample creates a multi-container application in an Azure Kubernetes Service (AKS) cluster."
 ---
-Try quick start.
+Try quick start - challenge record time 15 minutes for app, then delete resource group
 az group create --name MyResourceGroup --location eastus
 
 az acr create --resource-group MyResourceGroup --name MyHelmACRjm --sku Basic
