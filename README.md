@@ -15,6 +15,8 @@ Try quick start - TIME challenge record time 15 minutes for app, then delete res
 
 3rd attempt 03apr22 20:25 took 13:48:14 to delete commands
 
+4th attempt 04apr22 00:30 took 15:09:09 to delete commands
+
 This is a shorter version of docs.microsoft.com/en-us/azure/aks/quickstart-helm so any modifications to the below, check the page. i.e. if the acr name is different then you must update  the name in azure-vote-front/values.yaml
 
 az login
@@ -41,7 +43,7 @@ use external IP to see the App
 
 az group delete --name MyResourceGroup --yes --no-wait
 
-az group delete MC_MyResourceGroup_MyAKS_eastus --yes --no-wait
+az group delete --name MC_MyResourceGroup_MyAKS_eastus --yes --no-wait
 
 stop the clock
 
