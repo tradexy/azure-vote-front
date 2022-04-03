@@ -36,6 +36,8 @@ use external IP to see the App
 
 az group delete --name MyResourceGroup --yes --no-wait
 
+az group delete MC_MyResourceGroup_MyAKS_eastus --yes --no-wait
+
 stop the clock
 
 (remember to check 2 resource groups in portal and delete both)
