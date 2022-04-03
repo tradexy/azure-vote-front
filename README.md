@@ -7,7 +7,13 @@ products:
   - azure-redis-cache
 description: "This sample creates a multi-container application in an Azure Kubernetes Service (AKS) cluster."
 ---
-
+Try quick start.
+az group create --name MyResourceGroup --location eastus
+az acr create --resource-group MyResourceGroup --name MyHelmACRjm --sku Basic
+az aks create --resource-group MyResourceGroup --name MyAKS --location eastus --attach-acr MyHelmACRjm --generate-ssh-keys
+az login
+az aks get-credentials --resource-group MyResourceGroup --name MyAKS
+git clone 
 # Azure Voting App
 
 This sample creates a multi-container application in an Azure Kubernetes Service (AKS) cluster. The application interface has been built using Python / Flask. The data component is using Redis.
