@@ -7,7 +7,10 @@ products:
   - azure-redis-cache
 description: "This sample creates a multi-container application in an Azure Kubernetes Service (AKS) cluster."
 ---
-Try quick start - challenge record time 15 minutes for app, then delete resource group:
+Try quick start - TIME challenge record time 15 minutes for app, then delete resource group:
+first attempt 03apr22 19:17 took 21:25.67 to complete up to delete command
+
+This is a shorter version of docs.microsoft.com/en-us/azure/aks/quickstart-helm so any modifications to the below, check the page. i.e. if the acr name is different then you must update  the name in azure-vote-front/values.yaml
 
 az login
 
@@ -21,17 +24,21 @@ az aks get-credentials --resource-group MyResourceGroup --name MyAKS
 
 git clone https://github.com/tradexy/azure-vote-front.git
 
-cd azure-voting-app-redis/azure-vote/
+cd azure-vote-front/azure-vote/
 
 az acr build --image azure-vote-front:v1 --registry MyHelmACRjm --file Dockerfile .
-
-helm create azure-vote-front
 
 helm install azure-vote-front azure-vote-front/
 
 kubectl get --namespace default svc -w azure-vote-front
 
 use external IP to see the App
+
+az group delete --name MyResourceGroup --yes --no-wait
+
+stop the clock
+
+(remember to check 2 resource groups in portal and delete both)
 
 # Azure Voting App
 
