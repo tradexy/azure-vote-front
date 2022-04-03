@@ -9,11 +9,29 @@ description: "This sample creates a multi-container application in an Azure Kube
 ---
 Try quick start.
 az group create --name MyResourceGroup --location eastus
+
 az acr create --resource-group MyResourceGroup --name MyHelmACRjm --sku Basic
+
 az aks create --resource-group MyResourceGroup --name MyAKS --location eastus --attach-acr MyHelmACRjm --generate-ssh-keys
+
 az login
+
 az aks get-credentials --resource-group MyResourceGroup --name MyAKS
-git clone 
+
+git clone https://github.com/tradexy/azure-vote-front.git
+
+cd azure-voting-app-redis/azure-vote/
+
+az acr build --image azure-vote-front:v1 --registry MyHelmACRjm --file Dockerfile .
+
+helm create azure-vote-front
+
+helm install azure-vote-front azure-vote-front/
+
+kubectl get --namespace default svc -w azure-vote-front
+
+use external IP to see the App
+
 # Azure Voting App
 
 This sample creates a multi-container application in an Azure Kubernetes Service (AKS) cluster. The application interface has been built using Python / Flask. The data component is using Redis.
