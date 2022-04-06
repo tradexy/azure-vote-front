@@ -43,7 +43,7 @@ az group delete --name MC_myresourcegroup_myaks_eastus --yes --no-wait
 
 stop the clock
 
-(remember to check 2 resource groups in portal and delete both - it maybe that the MC_MyRes.. is deleted when MyRes.. is deleted))
+(remember to check 2 resource groups in portal and delete both -  MC_myres.. should be deleted when myres.. is deleted))
 
 # Azure Voting App
 
