@@ -35,7 +35,7 @@ git clone https://github.com/tradexy/azure-vote-front.git
 
 cd azure-vote-front/azure-vote/
 
-az acr build --image azure-vote-front:v1 --registry test-test-acr-jm --file Dockerfile .
+az acr build --image azure-vote-front:v1 --registry testacrjm --file Dockerfile .
 
 helm install azure-vote-front azure-vote-front/
 
