@@ -25,11 +25,11 @@ az login
 
 az group create --name testcluster --location uksouth
 
-az acr create --resource-group testcluster --name test-temp-acr-jm --sku Basic
+az acr create --resource-group testcluster --name testacrjm --sku Basic
 
-az aks create --resource-group testcluster --name test-aks-cluster-jm --location uksouth --attach-acr test-temp-acr-jm --generate-ssh-keys
+az aks create --resource-group testcluster --name testaksclusterjm --location uksouth --attach-acr testacrjm --generate-ssh-keys
 
-az aks get-credentials --resource-group testcluster --name test-aks-cluster-jm
+az aks get-credentials --resource-group testcluster --name testaksclusterjm
 
 git clone https://github.com/tradexy/azure-vote-front.git
 
@@ -45,7 +45,7 @@ use external IP to see the App
 
 az group delete --name testcluster --yes --no-wait
 
-az group delete --name MC_testcluster_test-aks-cluster-jm_eastus --yes --no-wait
+az group delete --name MC_testcluster_testaksclusterjm_uksouth --yes --no-wait
 
 stop the clock
 
