@@ -19,6 +19,8 @@ Try quick start - TIME challenge record time 15 minutes for app, then delete res
 
 8th attempt 01Jul22 16:00 took 20:00:00 to delete command (w)
 
+9th attempt 02Jul22 17:30 took 08:50:75 to delete command (w)
+
 This is a shorter version of docs.microsoft.com/en-us/azure/aks/quickstart-helm so any modifications to the below, check the page. i.e. use acr n name myhelmacrjm if different then you must update  the name in azure-vote-front/values.yaml
 
 az login
