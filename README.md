@@ -23,13 +23,13 @@ This is a shorter version of docs.microsoft.com/en-us/azure/aks/quickstart-helm 
 
 az login
 
-az group create --name testcluster --location uksouth
+az group create --name atestcluster --location uksouth
 
-az acr create --resource-group testcluster --name testacrjm --sku Basic
+az acr create --resource-group atestcluster --name testacrjm --sku Basic
 
-az aks create --resource-group testcluster --name myaks --location uksouth --attach-acr testacrjm --generate-ssh-keys
+az aks create --resource-group atestcluster --name myaks --location uksouth --attach-acr testacrjm --generate-ssh-keys
 
-az aks get-credentials --resource-group testcluster --name myaks
+az aks get-credentials --resource-group atestcluster --name myaks
 
 git clone https://github.com/tradexy/azure-vote-front.git
 
@@ -43,7 +43,7 @@ kubectl get --namespace default svc -w azure-vote-front
 
 use external IP to see the App
 
-az group delete --name myaks --yes --no-wait
+az group delete --name atestcluster --yes --no-wait
 
 az group delete --name MC_testcluster_myaks_uksouth --yes --no-wait
 
