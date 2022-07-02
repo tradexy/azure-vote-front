@@ -19,23 +19,23 @@ Try quick start - TIME challenge record time 15 minutes for app, then delete res
 
 8th attempt 01Jul22 16:00 took 20:00:00 to delete command (w)
 
-This is a shorter version of docs.microsoft.com/en-us/azure/aks/quickstart-helm so any modifications to the below, check the page. i.e. if the acr name is different then you must update  the name in azure-vote-front/values.yaml
+This is a shorter version of docs.microsoft.com/en-us/azure/aks/quickstart-helm so any modifications to the below, check the page. i.e. use acr n name myhelmacrjm if different then you must update  the name in azure-vote-front/values.yaml
 
 az login
 
 az group create --name atestcluster --location uksouth
 
-az acr create --resource-group atestcluster --name testacrjm --sku Basic
+az acr create --resource-group atestcluster --name myhelmacrjm --sku Basic
 
-az aks create --resource-group atestcluster --name myaks --location uksouth --attach-acr testacrjm --generate-ssh-keys
+az aks create --resource-group atestcluster --name testakscluster --location uksouth --attach-acr myhelmacrjm --generate-ssh-keys
 
-az aks get-credentials --resource-group atestcluster --name myaks
+az aks get-credentials --resource-group atestcluster --name testakscluster
 
 git clone https://github.com/tradexy/azure-vote-front.git
 
 cd azure-vote-front/azure-vote/
 
-az acr build --image azure-vote-front:v1 --registry testacrjm --file Dockerfile .
+az acr build --image azure-vote-front:v1 --registry myhelmacrjm --file Dockerfile .
 
 helm install azure-vote-front azure-vote-front/
 
@@ -45,7 +45,7 @@ use external IP to see the App
 
 az group delete --name atestcluster --yes --no-wait
 
-az group delete --name MC_testcluster_myaks_uksouth --yes --no-wait
+az group delete --name MC_atestcluster_testakscluster_uksouth --yes --no-wait
 
 stop the clock
 
