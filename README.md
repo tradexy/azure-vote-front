@@ -1,3 +1,5 @@
+example lucid chart https://lucid.app/lucidscale/6e96cd6a-9005-4855-93c0-47c407752d06/edit?invitationId=inv_5918a75b-69cd-47b3-9ac2-ae35e9ca17b6#
+MC_atestcluster_testakscluster_uksouth   (24 Oct 20222)
 
 description: "This sample creates a multi-container application in an Azure Kubernetes Service (AKS) cluster."
 ---
@@ -20,6 +22,11 @@ Try quick start - TIME challenge record time 15 minutes for app, then delete res
 8th attempt 01Jul22 16:00 took 20:00:00 to delete command (w)
 
 9th attempt 02Jul22 17:30 took 08:50:75 to delete command (w)
+
+10th attemp 24Oct22 18:00 took 10, mmt added lucidscale (lucidchart) https://lucid.app/lucidscale/6e96cd6a-9005-4855-93c0-47c407752d06/edit?invitationId=inv_5918a75b-69cd-47b3-9ac2-ae35e9ca17b6#
+
+
+
 
 This is a shorter version of docs.microsoft.com/en-us/azure/aks/quickstart-helm so any modifications to the below, check the page. i.e. use acr n name myhelmacrjm if different then you must update  the name in azure-vote-front/values.yaml
 
